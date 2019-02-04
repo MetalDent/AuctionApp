@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.bluemetal.auctionapp.activites.R;
+import com.bluemetal.auctionapp.R;
 
 
 public class LogInActivity extends AppCompatActivity {

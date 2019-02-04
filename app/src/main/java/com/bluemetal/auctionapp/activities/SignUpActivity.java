@@ -3,7 +3,7 @@ package com.bluemetal.auctionapp.activities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.bluemetal.auctionapp.activites.R;
+import com.bluemetal.auctionapp.R;
 
 
 public class SignUpActivity extends AppCompatActivity {
