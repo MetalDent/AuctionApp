@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "140334915164",
+    "firebase_url": "https://auctionapp-39da0.firebaseio.com",
+    "project_id": "auctionapp-39da0",
+    "storage_bucket": "auctionapp-39da0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140334915164:android:669c1641ddc759d5",
+        "android_client_info": {
+          "package_name": "com.bluemetal.auctionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140334915164-1bbeqe9gt92bto8hn4ni2c53rdgsa222.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtRbCYz6rs3MhS_r3c2S-6NEgnf54RSM0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
