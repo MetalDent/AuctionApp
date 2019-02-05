@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/db" android:title="Dashboard" />
-    <item android:id="@+id/pro" android:title="Profile" />
-    <item android:id="@+id/add" android:title="Add a Product" />
-    <item android:id="@+id/logout" android:title="Logout" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view" >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/db"
+            android:title="Dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"/>
+        <item
+            android:id="@+id/pro"
+            android:title="Profile"
+            android:icon="@drawable/ic_person_black_24dp"/>
+        <item
+            android:id="@+id/add"
+            android:title="My Products"
+            android:icon="@drawable/ic_add_circle_black_24dp"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"/>
+
+    </group>
 </menu>

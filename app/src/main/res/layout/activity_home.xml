@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.HomeActivity">
@@ -10,6 +11,7 @@
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
         android:background="#fff"
         app:itemTextColor="#A9A9A9"
         app:itemIconTint="#A9A9A9"
