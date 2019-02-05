@@ -1,12 +1,12 @@
 package com.bluemetal.auctionapp.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bluemetal.auctionapp.R;
@@ -15,13 +15,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import javax.security.auth.login.LoginException;
-
 
 public class SignUpActivity extends AppCompatActivity {
 
     private EditText editID, editEmail, editPass, editRePass;
-    private Button registerBn;
+    private TextView registerTx;
     private FirebaseAuth fbAuth;
 
     @Override
@@ -41,9 +39,9 @@ public class SignUpActivity extends AppCompatActivity {
         editEmail = findViewById(R.id.textemailID);
         editPass = findViewById(R.id.editPasskey);
         editRePass = findViewById(R.id.editPasskey2);
-        registerBn = findViewById(R.id.register);
+        registerTx = findViewById(R.id.register);
 
-        registerBn.setOnClickListener(new View.OnClickListener() {
+        registerTx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 userRegister();
