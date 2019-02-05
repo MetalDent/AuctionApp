@@ -9,9 +9,9 @@
     tools:context=".activities.HomeActivity">
 
     <android.support.design.widget.NavigationView
-        app:headerLayout="@layout/header"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
         android:background="#fff"
         app:itemTextColor="#A9A9A9"
         app:itemIconTint="#A9A9A9"

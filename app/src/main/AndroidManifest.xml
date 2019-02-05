@@ -20,7 +20,9 @@
         </activity>
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".activities.SignUpActivity" />
-        <activity android:name=".activities.MyProductsActivity"></activity>
+        <activity
+            android:name=".activities.AddPostActivity"
+            android:label="@string/title_activity_add_post"></activity>
     </application>
 
 </manifest>
