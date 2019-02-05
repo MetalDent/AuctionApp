@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AuctionApp</string>
+    <string name="title_activity_add_post">AddPostActivity</string>
 </resources>

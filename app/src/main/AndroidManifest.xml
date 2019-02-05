@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bluemetal.auctionapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,8 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HomeActivity"/>
-        <activity android:name=".activities.SignUpActivity"/>
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity
+            android:name=".activities.AddPostActivity"
+            android:label="@string/title_activity_add_post"></activity>
     </application>
 
 </manifest>
