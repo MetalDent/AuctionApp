@@ -22,7 +22,12 @@
         <activity android:name=".activities.SignUpActivity" />
         <activity
             android:name=".activities.AddPostActivity"
-            android:label="@string/title_activity_add_post"></activity>
+            android:label="@string/title_activity_add_post" />
+        <activity
+            android:name=".activities.MyProductsActivity"
+            android:label="@string/title_activity_my_products" />
+        <activity android:name=".activities.DashboardActivity" />
+        <activity android:name=".activities.ProfileActivity"></activity>
     </application>
 
 </manifest>
