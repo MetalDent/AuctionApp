@@ -13,7 +13,8 @@
         android:background="#fff"
         app:itemTextColor="#A9A9A9"
         app:itemIconTint="#A9A9A9"
-        >
+        app:menu="@menu/drawermenu"
+        android:layout_gravity="start">
 
     </android.support.design.widget.NavigationView>
 
