@@ -7,9 +7,86 @@
     tools:context=".activities.AddPostActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/image_bn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/add_btn" />
+
+    <EditText
+        android:id="@+id/edit_item_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/add_btn" />
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="Item Name" />
+
+    <EditText
+        android:id="@+id/edit_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="Description"/>
+
+    <EditText
+        android:id="@+id/edit_base_bid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="Base Bid" />
+
+    <EditText
+        android:id="@+id/edit_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="Start Time" />
+
+    <EditText
+        android:id="@+id/edit_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="End Time" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/submit_bn"
+        android:text="PUBLISH PRODUCT"/>
+
+
+    </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
