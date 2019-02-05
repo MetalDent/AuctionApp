@@ -41,6 +41,8 @@ public class SignUpActivity extends AppCompatActivity {
         editRePass = findViewById(R.id.editPasskey2);
         registerTx = findViewById(R.id.register);
 
+        getSupportActionBar().hide();
+
         registerTx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
