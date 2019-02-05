@@ -17,6 +17,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_home);
 
         mDrawerLayout = findViewById(R.id.drawer);
+        navigationView = findViewById(R.id.nav_view);
+
+        navigationView.setNavigationItemSelectedListener(this);
+
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
@@ -32,6 +37,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
         if (mToggle.onOptionsItemSelected(item)) {
             return true;
         }
@@ -64,10 +71,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startActivity(loginActivity);
             finish();
 
-        } else {
-
-            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
         }
+
         DrawerLayout drawer = findViewById(R.id.drawer);
         drawer.closeDrawer(GravityCompat.START);
         return true;
