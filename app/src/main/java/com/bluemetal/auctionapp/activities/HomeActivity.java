@@ -51,8 +51,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private Button btnEnterBid;
     private Dialog MyDialog;
 
-    private String bidAmount;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,9 +89,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         btnEnterBid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                bidAmount = editEnterBid.getText().toString().trim();
+                holder.bidAmount = editEnterBid.getText().toString().trim();
                 holder.didBid = true;
-                Toast.makeText(getApplicationContext(), "Your Bid is: " + bidAmount, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Your Bid is: " + holder.bidAmount, Toast.LENGTH_SHORT).show();
                 MyDialog.dismiss();
             }
         });
@@ -131,7 +129,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         if(!holder.didBid)
                             AlertDialog(holder);
                         else
-                            Toast.makeText(getApplicationContext(), "Your Bid is: " + bidAmount, Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Your Bid is: " + holder.bidAmount, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -169,6 +167,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         ImageView imageView;
         Button bidBn;
         boolean didBid;
+        String bidAmount;
 
         public PostViewHolder(View itemView) {
             super(itemView);
@@ -180,6 +179,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             imageView = itemView.findViewById(R.id.image_view);
             bidBn = itemView.findViewById(R.id.btnEnterBid);
             didBid = false;
+            bidAmount = "";
         }
     }
 
