@@ -46,21 +46,6 @@
 
     </android.support.design.widget.NavigationView>
 
-<!--- Tempo -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BID"
-            android:id="@+id/btnEnterBid"
-            android:textColor="#fff"
-            android:background="@drawable/enter_bid_layout"/>
-    </LinearLayout>
-<!-- -->
 
 </android.support.v4.widget.DrawerLayout>
 

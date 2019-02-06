@@ -47,8 +47,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private ProgressBar progressBar;
 
-    Button btnBid, btnEnterBid;
-    Dialog MyDialog;
+    private Button btnEnterBid;
+    private Dialog MyDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,19 +72,6 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        /********************** Keeps crashing **************************/
-
-        btnBid = findViewById(R.id.btnEnterBid);
-        btnBid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog();
-            }
-        });
-
-        /*******************************************************************/
-
     }
 
     public void AlertDialog(){
@@ -130,6 +117,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 holder.endTime.setText("End Time: " + model.getEndTime());
 
                 Picasso.get().load(model.getImageUrl()).into(holder.imageView);
+
+                holder.bidBn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AlertDialog();
+                    }
+                });
             }
 
             @NonNull
@@ -163,6 +157,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         TextView startTime;
         TextView endTime;
         ImageView imageView;
+        Button bidBn;
 
         public PostViewHolder(View itemView) {
             super(itemView);
@@ -172,6 +167,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             startTime = itemView.findViewById(R.id.start_time);
             endTime = itemView.findViewById(R.id.end_time);
             imageView = itemView.findViewById(R.id.image_view);
+            bidBn = itemView.findViewById(R.id.btnEnterBid);
         }
     }
 

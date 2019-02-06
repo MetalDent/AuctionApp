@@ -23,13 +23,13 @@
 
         <Button
             android:id="@+id/btnEnterBidDialog"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:text="Enter"
             android:layout_marginBottom="20dp"
-            android:textColor="#fff"
+            android:textColor="@color/colorAccent"
             android:background="@drawable/enter_bid_layout" />
     </LinearLayout>
 
