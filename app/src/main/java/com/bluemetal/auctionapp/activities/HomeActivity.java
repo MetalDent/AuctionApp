@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -50,6 +51,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private Button btnEnterBid;
     private Dialog MyDialog;
 
+    private String bidAmount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,20 +77,24 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void AlertDialog(){
+    public void AlertDialog(final PostViewHolder holder){
         MyDialog = new Dialog(HomeActivity.this);
         MyDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         MyDialog.setContentView(R.layout.bid_dialog);
         MyDialog.setTitle("Bid");
 
         btnEnterBid = MyDialog.findViewById(R.id.btnEnterBidDialog);
+        final EditText editEnterBid = MyDialog.findViewById(R.id.editEnterBid);
 
         btnEnterBid.setEnabled(true);
 
         btnEnterBid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Enter Bid Amount", Toast.LENGTH_LONG).show();
+                bidAmount = editEnterBid.getText().toString().trim();
+                holder.didBid = true;
+                Toast.makeText(getApplicationContext(), "Your Bid is: " + bidAmount, Toast.LENGTH_SHORT).show();
+                MyDialog.dismiss();
             }
         });
 
@@ -109,7 +116,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         mAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull PostViewHolder holder, int position, @NonNull Post model) {
+            protected void onBindViewHolder(@NonNull final PostViewHolder holder, int position, @NonNull Post model) {
                 holder.itemName.setText(model.getItemName());
                 holder.itemDesc.setText(model.getDescription());
                 holder.baseBid.setText("Base Bid: Rs." + model.getBaseBid());
@@ -121,7 +128,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 holder.bidBn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        AlertDialog();
+                        if(!holder.didBid)
+                            AlertDialog(holder);
+                        else
+                            Toast.makeText(getApplicationContext(), "Your Bid is: " + bidAmount, Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -158,6 +168,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         TextView endTime;
         ImageView imageView;
         Button bidBn;
+        boolean didBid;
 
         public PostViewHolder(View itemView) {
             super(itemView);
@@ -168,6 +179,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             endTime = itemView.findViewById(R.id.end_time);
             imageView = itemView.findViewById(R.id.image_view);
             bidBn = itemView.findViewById(R.id.btnEnterBid);
+            didBid = false;
         }
     }
 
