@@ -5,16 +5,8 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/db"
-            android:title="Dashboard"
-            android:icon="@drawable/ic_dashboard_black_24dp"/>
-        <item
-            android:id="@+id/pro"
-            android:title="Profile"
-            android:icon="@drawable/ic_person_black_24dp"/>
-        <item
             android:id="@+id/add"
-            android:title="My Products"
+            android:title="Add Product"
             android:icon="@drawable/ic_add_circle_black_24dp"/>
         <item
             android:id="@+id/logout"

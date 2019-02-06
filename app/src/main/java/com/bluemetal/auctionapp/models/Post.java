@@ -3,9 +3,20 @@ package com.bluemetal.auctionapp.models;
 public class Post {
     private String itemName;
     private String description;
-    private float baseBid;
+    private String baseBid;
     private String startTime;
     private String endTime;
+    private String imageUrl;
+
+    public Post() {}
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 
     public String getStartTime() {
         return startTime;
@@ -39,11 +50,11 @@ public class Post {
         this.description = description;
     }
 
-    public float getBaseBid() {
+    public String getBaseBid() {
         return baseBid;
     }
 
-    public void setBaseBid(float baseBid) {
+    public void setBaseBid(String baseBid) {
         this.baseBid = baseBid;
     }
 }

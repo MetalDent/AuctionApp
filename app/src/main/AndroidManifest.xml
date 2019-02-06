@@ -26,8 +26,6 @@
         <activity
             android:name=".activities.MyProductsActivity"
             android:label="@string/title_activity_my_products" />
-        <activity android:name=".activities.DashboardActivity" />
-        <activity android:name=".activities.ProfileActivity"></activity>
     </application>
 
 </manifest>

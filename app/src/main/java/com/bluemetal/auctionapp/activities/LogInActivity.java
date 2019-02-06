@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,8 @@ public class LogInActivity extends AppCompatActivity {
     private EditText editEmail, editPass;
     private FirebaseAuth fbAuth;
     private TextView loginTx, signupTx;
+
+    private ProgressBar progressBar;
 
     @Override
     protected void onStart() {
@@ -43,6 +46,9 @@ public class LogInActivity extends AppCompatActivity {
         editPass = findViewById(R.id.passkey);
         loginTx = findViewById(R.id.logIn);
         signupTx = findViewById(R.id.signUp);
+
+        progressBar = findViewById(R.id.progress_bar_login);
+        progressBar.setVisibility(View.INVISIBLE);
 
         getSupportActionBar().hide();
 
@@ -71,6 +77,8 @@ public class LogInActivity extends AppCompatActivity {
             return;
         }
 
+        progressBar.setVisibility(View.VISIBLE);
+
         fbAuth.signInWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -81,6 +89,7 @@ public class LogInActivity extends AppCompatActivity {
                     startActivity(new Intent(LogInActivity.this, HomeActivity.class));
                 } else {
                     Toast.makeText(getApplicationContext(), "Failed! Please Try Again.", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.INVISIBLE);
                 }
             }
         });
