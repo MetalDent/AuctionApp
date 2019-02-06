@@ -82,7 +82,7 @@
             android:id="@+id/btnEnterBid"
             android:layout_gravity="right"
             android:textColor="#fff"
-            android:background="@drawable/enter_bid_layout"/>
+            android:background="@drawable/bid_layout"/>
 
     </LinearLayout>
 
