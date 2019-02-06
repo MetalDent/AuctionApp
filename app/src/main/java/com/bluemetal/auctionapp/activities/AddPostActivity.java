@@ -112,12 +112,12 @@ public class AddPostActivity extends Activity {
                         String downloadUrl = downloadUri.toString();
 
                         DatabaseReference newPost = mDatabase.push();
-                        newPost.child("item_name").setValue(itemName);
-                        newPost.child("item_desc").setValue(itemDesc);
-                        newPost.child("base_bid").setValue(baseBid);
-                        newPost.child("start_time").setValue(startTime);
-                        newPost.child("end_time").setValue(endTime);
-                        newPost.child("image_url").setValue(downloadUrl);
+                        newPost.child("itemName").setValue(itemName);
+                        newPost.child("description").setValue(itemDesc);
+                        newPost.child("baseBid").setValue(baseBid);
+                        newPost.child("startTime").setValue(startTime);
+                        newPost.child("endTime").setValue(endTime);
+                        newPost.child("imageUrl").setValue(downloadUrl);
 
                         Toast.makeText(getApplicationContext(), "Published Successfully!", Toast.LENGTH_SHORT).show();
 

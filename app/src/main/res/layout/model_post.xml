@@ -3,20 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
+    android:layout_margin="13dp"
     cardview:cardCornerRadius="5dp"
-    cardview:cardBackgroundColor="#fff">
+    cardview:cardBackgroundColor="#ffffff">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="8dp">
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/add_btn"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:id="@+id/image_view"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Item Name"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:id="@+id/item_name"/>
 
         <TextView
@@ -24,10 +34,11 @@
             android:layout_height="wrap_content"
             android:text="Description"
             android:textStyle="italic"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:id="@+id/description"
-            android:layout_marginTop="4sp"
-            android:layout_marginBottom="4sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:autoLink="web"
             android:textColorLink="#a0d3ff" />
 
@@ -36,20 +47,30 @@
             android:layout_height="wrap_content"
             android:text="Base Bid"
             android:id="@+id/base_bid"
-            android:layout_marginBottom="4sp"
-            android:autoLink="web"
+            android:textSize="15sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:textColorLink="#69a2ff"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Start Time"
+            android:textSize="15sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:id="@+id/start_time"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="End Time"
+            android:textSize="15sp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
             android:id="@+id/end_time"/>
 
     </LinearLayout>

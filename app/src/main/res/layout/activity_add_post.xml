@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageButton
@@ -28,7 +28,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/input_outline"
             android:ems="10"
             android:hint="Item Name"
@@ -86,15 +86,23 @@
             android:ems="10"
             android:hint="End Time" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:layout_marginTop="55dp"
             android:background="@color/colorPrimary"
             android:id="@+id/submit_bn"
+            android:layout_weight="1"
             android:textColor="#fff"
-            android:text="PUBLISH PRODUCT"/>
+            android:textSize="17sp"
+            android:text="PUBLISH PRODUCT"
+            android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
